@@ -1,24 +1,78 @@
 {
   "expo": {
-    "name": "quicklist",
-    "slug": "quicklist",
+    "name": "QuickList",
+    "slug": "QuickList",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "icon": "./assets/ios-icon.png",
+    "userInterfaceStyle": "dark",
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 37,
+            "targetSdkVersion": 36,
+            "minSdkVersion": 31,
+            "buildToolsVersion": "37.0.0"
+          },
+          "ios": {
+            "deploymentTarget": "18.0"
+          }
+        }
+      ],
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-logo.png",
+          "backgroundColor": "#080D1B",
+          "resizeMode": "contain",
+          "imageWidth": 200,
+          "ios": {
+            "imageWidth": 300
+          }
+        }
+      ],
+      "expo-status-bar"
+    ],
+    "updates": {
+      "enabled": true,
+      "checkAutomatically": "NEVER",
+      "fallbackToCacheTimeout": 5,
+      "url": "https://u.expo.dev/6bf9ebca-70a9-4c80-b061-27fe7d242584"
     },
-    "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+    "runtimeVersion": "quicklist-native-1",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "buildNumber": "1",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.DivergentDevelopmentSolutions.QuickList",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "android": {
+      "versionCode": 1,
+      "package": "com.DivergentDevelopmentSolutions.QuickList",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png",
+        "backgroundColor": "#080D1B"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6bf9ebca-70a9-4c80-b061-27fe7d242584"
+      }
+    },
+    "owner": "yonito97"
   }
 }

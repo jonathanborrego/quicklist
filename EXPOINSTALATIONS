@@ -1,0 +1,33 @@
+npm install --global eas-cli
+eas login
+npx create-expo-app@latest AppName --template blank
+expo init --template 
+to use npm instead of yarn use --npm
+
+npx eas-cli@latest init
+npx expo install expo-updates
+eas update:configure
+eas build:configure
+
+# to update dependencies to stable versions use:
+npx expo-doctor
+# update all dependencies to latest compatible version with expo version in app
+npx expo install --check
+
+npx expo install --fix
+expo doctor --fix-dependencies
+
+#to update dependencies to the latest version using NPM:
+npx npm-check-updates -u
+npm install --legacy-peer-deps
+npm install 
+
+# to run expo in production mode.. 
+npx expo start --no-dev --minify
+
+# CODE TO UPDATE OVER THE AIR WITH EAS....
+eas update --branch preview --message "Updating the app"
+eas build --profile preview --message "Updating the app"
+
+
+eas build --local --platform android --profile preview
